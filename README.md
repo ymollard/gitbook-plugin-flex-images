@@ -1,1 +1,1 @@
-# gitbook-plugin-flex-thumnails
+# gitbook-plugin-flex-images
