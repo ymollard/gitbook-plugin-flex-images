@@ -2,6 +2,8 @@
 
 Display a block image images as a flexible row of thumbnails.
 
+**Note** This does not yet work with ebook (pdf, ePub) output.
+
 ```markdown
 {% flex-images %}
   ![Alt Text](http://placehold.it/640x480)
