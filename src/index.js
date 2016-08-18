@@ -16,8 +16,9 @@ function blockFilter (imageItem) {
   return image.length > 1;
 }
 
-function flexWrap (block, position) {
+function flexWrap (block, config) {
   var blockText, images, figures = [];
+  console.log(config);
 
   blockText = block.body.split(/\r?\n/);
   images = blockText.filter(blockFilter);
@@ -52,7 +53,8 @@ module.exports = {
   blocks: {
     fleximages: {
       process: function(block) {
-        return flexWrap(block)
+        var config = this.options.pluginsConfig.flexImages || {};
+        return flexWrap(block, config)
       }
     }
   }
