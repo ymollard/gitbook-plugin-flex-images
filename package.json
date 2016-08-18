@@ -1,0 +1,32 @@
+{
+  "name": "gitbook-plugin-flex-images",
+  "version": "0.1.0",
+  "description": "GitBook plugin that takes a block of images and wraps them in a flex box of thumbnails.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "gitbook": ">=3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pelted/gitbook-plugin-flex-images.git"
+  },
+  "keywords": [
+    "gitbook",
+    "gitbook-plugin",
+    "image",
+    "thumbnails",
+    "flex"
+  ],
+  "author": "Chris Born",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/pelted/gitbook-plugin-flex-images/issues"
+  },
+  "homepage": "https://github.com/pelted/gitbook-plugin-flex-images#readme",
+  "dependencies": {
+    "markup-it": "^2.4.0"
+  }
+}

@@ -4,31 +4,27 @@ Display a block image images as a flexible row of thumbnails.
 
 ```markdown
 {% flex-images %}
-  ![Alt Text](http://placehold.it/400x300)
-  ![Alt Text](http://placehold.it/400x300)
-  ![Alt Text](http://placehold.it/400x300)
+  ![Alt Text](http://placehold.it/640x480)
+  ![Alt Text](http://placehold.it/640x480)
+  ![Alt Text](http://placehold.it/640x480)
+  ![Alt Text](http://placehold.it/640x480)
 {% endflex-images %}
 ```
 
-<div class="figure-row" style="display: flex; flex-flow: row wrap; justify-content: center;">
-  <div class="figure" style="padding: 4px; max-width: 250px">
-    <img src="http://placehold.it/400x300" alt="" style="padding: 4px; background-color: #ffffff; border: 1px solid
-#dddddd"; border-radius: 4px;/>
+<div class="figure-block" style="padding: .5vw; font-size: 0; flex-flow: row wrap; display: flex; align-content: space-between;">
+  <div style="flex: auto; width: 200px; margin: .5vw;">
+    <img src="http://placehold.it/640x480" alt="" style="width: 100%; height: auto; padding: 2px; border: 1px solid #dddddd;"/>
   </div>
-  <div class="figure" style="padding: 4px; max-width: 250px">
-    <img src="http://placehold.it/400x300" alt="" style="padding: 4px; background-color: #ffffff; border: 1px solid
-#dddddd"; border-radius: 4px;/>
+  <div style="flex: auto; width: 200px; margin: .5vw;">
+    <img src="http://placehold.it/640x480" alt="" style="width: 100%; height: auto; padding: 2px; border: 1px solid #dddddd;"/>
   </div>
-  <div class="figure" style="padding: 4px; max-width: 250px">
-    <img src="http://placehold.it/400x300" alt="" style="padding: 4px; background-color: #ffffff; border: 1px solid
-#dddddd"; border-radius: 4px;/>
+  <div style="flex: auto; width: 200px; margin: .5vw;">
+    <img src="http://placehold.it/640x480" alt="" style="width: 100%; height: auto; padding: 2px; border: 1px solid #dddddd;"/>
   </div>
-  <div class="figure" style="padding: 4px; max-width: 250px">
-    <img src="http://placehold.it/400x300" alt="" style="padding: 4px; background-color: #ffffff; border: 1px solid
-#dddddd"; border-radius: 4px;/>
+  <div style="flex: auto; width: 200px; margin: .5vw;">
+    <img src="http://placehold.it/640x480" alt="" style="width: 100%; height: auto; padding: 2px; border: 1px solid #dddddd;"/>
   </div>
-  <div class="figure" style="padding: 4px; max-width: 250px">
-    <img src="http://placehold.it/400x300" alt="" style="padding: 4px; background-color: #ffffff; border: 1px solid
-#dddddd"; border-radius: 4px;/>
+  <div style="flex: auto; width: 200px; margin: .5vw;">
+    <img src="http://placehold.it/640x480" alt="" style="width: 100%; height: auto; padding: 2px; border: 1px solid #dddddd;"/>
   </div>
 </div>
