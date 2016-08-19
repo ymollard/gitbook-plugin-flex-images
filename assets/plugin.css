@@ -1,29 +1,33 @@
+/*csslint box-model:false */
+
 .figure-block {
-    padding: .5vw;
-    font-size: 0;
-    flex-flow: row wrap;
-    display: flex;
-    align-content: space-between;
+  padding: .5vw;
+  font-size: 0;
+  flex-flow: row wrap;
+  display: flex;
+  align-content: space-between;
 }
 
 .figure-block div {
-    flex: auto;
-    width: 200px;
-    margin: .5vw;
+  display: flex;
+  flex: auto;
+  width: 200px;
+  margin: .5vw;
 }
 
 .figure-block div img {
-    width: 100%;
-    height: auto;
-    padding: 4px;
-    border: 1px solid #dddddd;
+  width: 100%;
+  height: auto;
+  overflow-y: hidden;
+  padding: 4px;
+  border: 1px solid #dddddd;
 }
 
 @media screen and (max-width: 400px) {
-    .figure-block div {
-        margin: 0;
-    }
-    .figure-block {
-        padding: 0;
-    }
+  .figure-block div {
+    margin: 0;
+  }
+  .figure-block {
+    padding: 0;
+  }
 }
