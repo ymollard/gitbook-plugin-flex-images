@@ -9,12 +9,15 @@ module.exports = {
     fleximages: {
       process: function( block ) {
         var Plugin = require('../assets/plugin.js')
-        var config = this.options.pluginsConfig.flexImages || {};
-        var flexbox = new Plugin.Flexbox(block, config);
 
-        console.log(flexbox.output); // TODO:0 remove log comments
+        var defaults = {
+          baseImageUrl: '',
+          parseInternalMarkdown: true
+        };
 
-        return 'some image block';
+        var config = this.config.get('pluginsConfig').flexImages || defaults;
+
+        return Plugin.Flexbox(block, config.baseImageUrl, config.parseInternalMarkdown);
       }
     }
   }

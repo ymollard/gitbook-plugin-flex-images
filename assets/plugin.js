@@ -1,14 +1,6 @@
 'use strict';
 
-var MarkupIt = require( 'markup-it' );
-var markdownSyntax = require( 'markup-it/syntaxes/markdown' );
-var htmlSyntax = require( 'markup-it/syntaxes/html' );
-
-var markdown = new MarkupIt( markdownSyntax );
-var html = new MarkupIt( htmlSyntax );
-
 var options = {};
-var figures = [];
 
 function blockFilter( imageItem ) {
   var image = imageItem.trim()
@@ -16,17 +8,23 @@ function blockFilter( imageItem ) {
 }
 
 function parseMarkdown( text ) {
+  var MarkupIt = require( 'markup-it' );
+  var markdownSyntax = require( 'markup-it/syntaxes/markdown' );
+  var htmlSyntax = require( 'markup-it/syntaxes/html' );
+
+  var markdown = new MarkupIt( markdownSyntax );
+  var html = new MarkupIt( htmlSyntax );
+
   md = markdown.toContent( text );
   parsed = html.toText( md );
   return parsed;
 };
 
 function buildFigures( block ) {
-  let blockText, images = [];
+  var blockText, images = [], figures = [];
 
   blockText = block.body.split( /\r?\n/ );
   images = blockText.filter( blockFilter );
-
   images.forEach( function( img ) {
     var inner;
 
@@ -44,23 +42,21 @@ function buildFigures( block ) {
     );
   });
 
-  return;
+  return figures;
 }
 
 var Flexbox = function(block, baseImageUrl, parseInternalMarkdown) {
-  console.log('Flexbox');
+  options.baseImageUrl = baseImageUrl;
+  options.parseInternalMarkdown = parseInternalMarkdown;
 
-  options.baseImageUrl = baseImageUrl || '';
-  options.parseInternalMarkdown = parseInternalMarkdown || true;
-
-  buildFigures(block);
+  var figures = buildFigures(block);
 
   var output = ( '<div class="figure-block">' +
     figures.join( '\n' )
     + '</div>'
   );
 
-  return;
+  return output;
 };
 
 var Tables = function(block, baseImageUrl, parseInternalMarkdown) {
