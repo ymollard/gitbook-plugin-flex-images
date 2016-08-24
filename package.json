@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-flex-images",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "GitBook plugin that takes a block of images and wraps them in a flex box of thumbnails.",
   "main": "src/index.js",
   "scripts": {
