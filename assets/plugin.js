@@ -15,8 +15,8 @@ function parseMarkdown( text ) {
   var markdown = new MarkupIt( markdownSyntax );
   var html = new MarkupIt( htmlSyntax );
 
-  md = markdown.toContent( text );
-  parsed = html.toText( md );
+  var md = markdown.toContent( text );
+  var parsed = html.toText( md );
   return parsed;
 };
 
