@@ -5,12 +5,12 @@ Display a block image images as a flexible row of thumbnails.
 **Note** This does not yet work with ebook (pdf, ePub) output.
 
 ```markdown
-{% flex-images %}
+{% fleximages %}
   ![Alt Text](http://placehold.it/640x480)
   ![Alt Text](http://placehold.it/640x480)
   ![Alt Text](http://placehold.it/640x480)
   ![Alt Text](http://placehold.it/640x480)
-{% endflex-images %}
+{% endfleximages %}
 ```
 
 <div class="figure-block" style="padding: .5vw; font-size: 0; flex-flow: row wrap; display: flex; align-content: space-between;">
